@@ -1,7 +1,5 @@
-import torch
-import torch.nn as nn
 from collections import OrderedDict
-from .FRRN_utils import *
+from Models.Utils.FRRN_utils import *
 
 
 class FRRNet(nn.Module):
