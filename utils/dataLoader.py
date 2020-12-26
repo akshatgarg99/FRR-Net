@@ -8,18 +8,11 @@ import random
 
 
 class camvidLoader(data.Dataset):
-    def __init__(
-            self,
-            root,
-            split="train",
-            is_transform=False,
-            img_norm=True,
-            test_mode=False,
-    ):
+    def __init__(self,root,split="train",is_transform=False,test_mode=False,):
+
         self.root = root
         self.split = split
         self.is_transform = is_transform
-        self.img_norm = img_norm
         self.test_mode = test_mode
         self.CAMVID_MEAN = [0.41189489566336, 0.4251328133025, 0.4326707089857]
         self.CAMVID_STD = [0.27413549931506, 0.28506257482912, 0.28284674400252]
@@ -76,7 +69,6 @@ class camvidLoader(data.Dataset):
         lbl = torch.from_numpy(lbl).long()
         return img, lbl
 
-
     def decode_segmap(self, temp, plot=False):
         Sky = [128, 128, 128]
         Building = [128, 0, 0]
@@ -91,8 +83,7 @@ class camvidLoader(data.Dataset):
         Bicyclist = [0, 128, 192]
         Unlabelled = [0, 0, 0]
 
-        label_colours = np.array(
-            [
+        label_colours = np.array([
                 Sky,
                 Building,
                 Pole,
@@ -104,9 +95,8 @@ class camvidLoader(data.Dataset):
                 Car,
                 Pedestrian,
                 Bicyclist,
-                Unlabelled,
-            ]
-        )
+                Unlabelled
+        ])
         r = temp.copy()
         g = temp.copy()
         b = temp.copy()
