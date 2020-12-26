@@ -7,8 +7,8 @@
 
 ## Results  
 
-Image                            |  Probability Maps                      | Segmentations 
-:-------------------------------:|:--------------------------------------:|:-------------------------:
+Image                                                    |  Probability Maps                      | Segmentations 
+:-------------------------------------------------------:|:--------------------------------------:|:-------------------------:
 <img src=Results/example1.png width="480" height="352"/> |  <img src=Results/example1_heat.png /> |  <img src=Results/example1_masks.png />
 <img src=Results/example3.png width="480" height="352"/> |  <img src=Results/example3_heat.png /> |  <img src=Results/example3_masks.png />
 <img src=Results/example4.png width="480" height="352"/> |  <img src=Results/example4_heat.png /> |  <img src=Results/example4_masks.png />
