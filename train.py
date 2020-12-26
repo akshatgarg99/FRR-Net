@@ -16,7 +16,7 @@ def train():
 
     # augmentation = aug
 
-    data_path = '../input/dataset/CamVid'
+    data_path = 'CamVid'
 
     t_loader = camvidLoader(data_path, is_transform=True,
                             split='train',
@@ -37,7 +37,8 @@ def train():
     model = torch.nn.DataParallel(model, device_ids=range(torch.cuda.device_count()))
 
     optimizer = torch.optim.Adam(model.parameters(), lr=1.0e-4)
-    scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[20, 25, 30, 35, 38], gamma=0.1, verbose=True)
+    scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[20, 25, 30, 35, 38], gamma=0.1,
+                                                     verbose=True)
     # optimizer = optimizer_cls()
 
     loss_fn = cross_entropy2d
@@ -108,8 +109,9 @@ def train():
         scheduler.step()
     return model
 
-def view_result(model,image,index):
-    if index>11 or index <-1:
+
+def view_result(model, image, index):
+    if index > 11 or index < -1:
         print('out of range')
         return
     img = cv2.imread('../input/dataset/CamVid/test/Seq05VD_f04200.png')
@@ -144,4 +146,5 @@ def view_result(model,image,index):
 
 if __name__ == '__main__':
     model = train()
-
+    image_path = 'CamVid/test/0001TP_008550.png'
+    view_result(model, image_path, -1)
