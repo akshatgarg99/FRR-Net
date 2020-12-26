@@ -13,8 +13,6 @@ Image                                                    |  Probability Maps    
 <img src=Results/example3.png width="340" height="176"/> |  <img src=Results/example3_heat.png /> |  <img src=Results/example3_masks.png />
 <img src=Results/example4.png width="370" height="176"/> |  <img src=Results/example4_heat.png /> |  <img src=Results/example4_masks.png />
 
-
-<img src=content_images/content_image5.jpg width="210" height="250"/> |  <img src=style_images/style5.jpg width="210" height="250"/> |  <img src=Result/target5.jpg width="210" height="250"/>
-<img src=content_images/content_image3.jpg width="210" height="250"/> |  <img src=style_images/style3.jpg width="210" height="250"/> |  <img src=Result/target3.jpeg width="210" height="250"/>
-<img src=content_images/content_image4.jpg width="210" height="250"/> |  <img src=style_images/style4.jpg width="210" height="250"/> |  <img src=Result/target4.jpg width="210" height="250"/>
-<img src=content_images/content_image.jpg width="210" height="250"/>  |  <img src=style_images/style.jpg width="210" height="250"/>  |  <img src=Result/target.jpg width="210" height="250"/>
+<img src=Results/0001TP_009420.png width="370" height="176"/>      |  <img src=Results/bike1.png /> |  <img src=Results/boards1.png />
+<img src=Results/buildings1.png >                                  |  <img src=Results/cars1.png /> |  <img src=Results/pavement1.png />
+<img src=Results/poles1.png />                                     |  <img src=Results/road1.png /> |  <img src=Results/sky1.png />
