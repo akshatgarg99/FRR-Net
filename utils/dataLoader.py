@@ -4,6 +4,7 @@ import torch
 import numpy as np
 from torch.utils import data
 import cv2
+import random
 
 
 class camvidLoader(data.Dataset):
@@ -34,9 +35,9 @@ class camvidLoader(data.Dataset):
         return len(self.files[self.split])
 
     def __getitem__(self, index):
-            img_name = self.files[self.split][index]
-            img_path = self.root + "/" + self.split + "/" + img_name
-            lbl_path = self.root + "/" + self.split + "annot/" + img_name
+        img_name = self.files[self.split][index]
+        img_path = self.root + "/" + self.split + "/" + img_name
+        lbl_path = self.root + "/" + self.split + "annot/" + img_name
 
         img = cv2.imread(img_path)
         lbl = cv2.imread(lbl_path)
@@ -51,7 +52,7 @@ class camvidLoader(data.Dataset):
         lbl = lbl[4:-4, :, 0]
         img = img[4:-4]
 
-        #augmentation
+        # augmentation
         gen = random.random()
         if gen >0.2:
             img = img[::-1,:,:].copy()
