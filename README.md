@@ -10,7 +10,7 @@
 Image                            |  Probability Maps                      | Segmentations 
 :-------------------------------:|:--------------------------------------:|:-------------------------:
 <img src=Results/example1.png /> |  <img src=Results/example1_heat.png /> |  <img src=Results/example1_masks.png />
-<img src=Results/example2.png /> |  <img src=Results/example2_heat.png /> |  <img src=Results/example2_masks.png />
+<img src=Results/example3.png /> |  <img src=Results/example3_heat.png /> |  <img src=Results/example3_masks.png />
 
 <img src=content_images/content_image5.jpg width="210" height="250"/> |  <img src=style_images/style5.jpg width="210" height="250"/> |  <img src=Result/target5.jpg width="210" height="250"/>
 <img src=content_images/content_image3.jpg width="210" height="250"/> |  <img src=style_images/style3.jpg width="210" height="250"/> |  <img src=Result/target3.jpeg width="210" height="250"/>
